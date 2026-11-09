@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "windows-server-mcp"
+version = "1.0.0"
+description = "Advanced Windows management, diagnostics, security, and optimization MCP server"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Rufus (AstraxOf)", email = "avpn497@gmail.com" },
+    { name = "Ahmed Laminou Amadou" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.12,<3",
+    "psutil>=6.0.0",
+    "pydantic>=2.0.0"
+]
+keywords = ["mcp", "windows", "automation", "system", "task manager"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: Developers",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13"
+]
+
+[project.urls]
+Homepage = "https://github.com/AstraxOf/windows-server-mcp"
+Repository = "https://github.com/AstraxOf/windows-server-mcp.git"
+Documentation = "https://github.com/AstraxOf/windows-server-mcp/tree/main/docs"
+Issues = "https://github.com/AstraxOf/windows-server-mcp/issues"
+
+[project.scripts]
+windows-server-mcp = "windows_server_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["windows_server_mcp"]

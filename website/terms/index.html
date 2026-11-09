@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Terms of use for Windows Management MCP Server." />
+    <title>Terms | Windows Management MCP Server</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header solid">
+      <a class="brand" href="../">
+        <span class="brand-mark" aria-hidden="true">WM</span>
+        <span>Windows Management MCP</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="../#tools">Tools</a>
+        <a href="../#safety">Safety</a>
+        <a href="../#install">Install</a>
+        <a href="../privacy/">Privacy</a>
+      </nav>
+    </header>
+
+    <main class="legal">
+      <section class="legal-panel reveal">
+        <p class="eyebrow">Terms of Use</p>
+        <h1>Windows Management MCP Server Terms</h1>
+        <p>Last updated: June 25, 2026</p>
+
+        <h2>Use At Your Own Risk</h2>
+        <p>
+          Windows Management MCP Server exposes local Windows management tools.
+          Some tools can change system state, delete files, edit the Registry,
+          manage services, install updates, run PowerShell, or affect running
+          processes. Review commands and targets before approving tool calls.
+        </p>
+
+        <h2>Local Execution</h2>
+        <p>
+          The server runs with the privileges of the process that launches it.
+          If you start it from an Administrator terminal, tools may perform
+          Administrator-level changes. Use the least privilege necessary.
+        </p>
+
+        <h2>No Warranty</h2>
+        <p>
+          The software is provided under the MIT License without warranty of any
+          kind. You are responsible for reviewing, testing, and safely operating
+          it in your own environment.
+        </p>
+
+        <h2>Client Responsibility</h2>
+        <p>
+          The MCP client or assistant connected to this server may decide when
+          to request tool calls. Use trusted clients, require confirmation for
+          risky actions, and avoid exposing the server over a network without
+          authentication, authorization, logging, and a tool allowlist.
+        </p>
+
+        <h2>License</h2>
+        <p>
+          This project is distributed under the MIT License. See the
+          <a href="https://github.com/AstraxOf/windows-server-mcp/blob/main/LICENSE">LICENSE</a>
+          file for details.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>MIT licensed open-source Windows MCP server by AstraxOf, based on the original work by Ahmed Laminou Amadou.</p>
+      <div>
+        <a href="../">Home</a>
+        <a href="../privacy/">Privacy</a>
+      </div>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

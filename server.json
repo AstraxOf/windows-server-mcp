@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.astraxof/windows-server-mcp",
+  "title": "Windows Management",
+  "description": "Local Windows management, diagnostics, security, cleanup, and optimization MCP server.",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/AstraxOf/windows-server-mcp",
+  "repository": {
+    "url": "https://github.com/AstraxOf/windows-server-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "windows-server-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

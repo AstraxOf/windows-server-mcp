@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Windows Management MCP Server is a local Model Context Protocol server for Windows diagnostics, cleanup, security checks, hardware inspection, and administrative workflows."
+    />
+    <title>Windows Management MCP Server</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-elevate>
+      <a class="brand" href="#top" aria-label="Windows Management MCP Server home">
+        <span class="brand-mark" aria-hidden="true">WM</span>
+        <span>Windows Management MCP</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#demo">Demo</a>
+        <a href="#tools">Tools</a>
+        <a href="#safety">Safety</a>
+        <a href="#install">Install</a>
+        <a href="privacy/">Privacy</a>
+        <a href="terms/">Terms</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Local Windows automation for MCP clients</p>
+            <h1>Windows Management MCP Server</h1>
+            <p class="lede">
+              A Python-based Model Context Protocol server for Windows diagnostics,
+              task management, cleanup, hardware inspection, security checks, and
+              administrative workflows.
+            </p>
+            <div class="actions">
+              <a class="button primary" href="#install">Install</a>
+              <a class="button secondary" href="https://github.com/AstraxOf/windows-server-mcp">GitHub</a>
+            </div>
+          </div>
+
+          <div class="terminal reveal" aria-label="Package install command">
+            <div class="terminal-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <pre><code>pip install windows-server-mcp
+
+windows-server-mcp
+
+# 100 tools over stdio
+# Designed for local MCP clients</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats band" aria-label="Project highlights">
+        <div class="stat reveal">
+          <strong>100</strong>
+          <span>native MCP tools</span>
+        </div>
+        <div class="stat reveal">
+          <strong>Local</strong>
+          <span>stdio-first execution</span>
+        </div>
+        <div class="stat reveal">
+          <strong>Windows</strong>
+          <span>10, 11, and Server workflows</span>
+        </div>
+      </section>
+
+      <section id="demo" class="section demo-section">
+        <div class="section-head reveal">
+          <p class="eyebrow">Demo video</p>
+          <h2>See the Windows MCP Server working from a real desktop workflow.</h2>
+          <p>
+            Watch a walkthrough of the server exposing local Windows diagnostics,
+            management, and automation tools to an MCP client.
+          </p>
+        </div>
+        <div class="video-frame reveal">
+          <iframe
+            src="https://www.youtube.com/embed/1GNk_GYYkww"
+            title="Windows Management MCP Server demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="tools" class="section">
+        <div class="section-head reveal">
+          <p class="eyebrow">Tool coverage</p>
+          <h2>Inspect, diagnose, and manage Windows from your MCP client.</h2>
+        </div>
+
+        <div class="tool-grid">
+          <article class="tool-card reveal">
+            <h3>Task Manager</h3>
+            <p>CPU, GPU, memory, disk usage, process trees, process details, suspend, resume, and kill.</p>
+          </article>
+          <article class="tool-card reveal">
+            <h3>Storage Cleanup</h3>
+            <p>Disk reports, largest files, duplicate discovery, old files, temp cleanup, and Recycle Bin workflows.</p>
+          </article>
+          <article class="tool-card reveal">
+            <h3>Security</h3>
+            <p>Defender status and scans, firewall rules, BitLocker, Secure Boot, UAC, updates, and restore points.</p>
+          </article>
+          <article class="tool-card reveal">
+            <h3>Hardware</h3>
+            <p>GPU details, display configuration, installed drivers, problem devices, battery, thermal, and power plans.</p>
+          </article>
+          <article class="tool-card reveal">
+            <h3>Networking</h3>
+            <p>Interfaces, active sockets, listening ports, firewall correlation, Wi-Fi networks, and latency checks.</p>
+          </article>
+          <article class="tool-card reveal">
+            <h3>Developer Workflows</h3>
+            <p>Python and Node discovery, environment variables, common development ports, screenshots, and clipboard helpers.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="safety" class="section split">
+        <div class="reveal">
+          <p class="eyebrow">Safety model</p>
+          <h2>Built for local control, with powerful tools clearly separated by risk.</h2>
+        </div>
+        <div class="safety-list reveal">
+          <p>
+            The server runs with the privileges of the account that starts it.
+            Read-only reports should be used first, dry-run workflows are preferred
+            before mutation, and sharp actions deserve explicit review.
+          </p>
+          <ul>
+            <li>Prefer report tools before changing system state.</li>
+            <li>Use Recycle Bin and dry-run cleanup tools before permanent deletion.</li>
+            <li>Avoid Administrator launch unless the task needs elevated privileges.</li>
+            <li>Do not expose the server over a network without authentication and a tool allowlist.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="install" class="section install">
+        <div class="section-head reveal">
+          <p class="eyebrow">Install</p>
+          <h2>Launch it from any MCP client that supports stdio servers.</h2>
+        </div>
+        <div class="install-grid">
+          <div class="code-panel reveal">
+            <h3>PyPI</h3>
+            <pre><code>pip install windows-server-mcp</code></pre>
+          </div>
+          <div class="code-panel reveal">
+            <h3>MCP client config</h3>
+            <pre><code>{
+  "mcpServers": {
+    "windows-management": {
+      "command": "windows-server-mcp",
+      "args": []
+    }
+  }
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section links">
+        <a class="link-card reveal" href="https://pypi.org/project/windows-server-mcp/">
+          <span>PyPI</span>
+          <strong>windows-server-mcp</strong>
+        </a>
+        <a class="link-card reveal" href="https://github.com/AstraxOf/windows-server-mcp">
+          <span>GitHub</span>
+          <strong>AstraxOf/windows-server-mcp</strong>
+        </a>
+        <a class="link-card reveal" href="https://github.com/AstraxOf/windows-server-mcp/blob/main/docs/TOOLS.md">
+          <span>Docs</span>
+          <strong>Complete tool catalog</strong>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>MIT licensed open-source Windows MCP server by AstraxOf, based on the original work by Ahmed Laminou Amadou.</p>
+      <div>
+        <a href="privacy/">Privacy</a>
+        <a href="terms/">Terms</a>
+      </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
